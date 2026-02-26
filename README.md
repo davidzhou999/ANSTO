@@ -392,3 +392,11 @@ python recon_tomopy_astra_fbp_patched.py ^
   --save nii --nii_name recon_dingo_hamming.nii.gz
 
   
+
+
+
+
+20260219 update
+
+uploaded trained mechine learning model file:
+n2same_het_pretrained.pt

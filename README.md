@@ -398,5 +398,5 @@ python recon_tomopy_astra_fbp_patched.py ^
 
 20260219 update
 
-uploaded trained mechine learning model file:
-n2same_het_pretrained.pt
+uploaded trained mechine learning model file (n2same_het_pretrained.pt) to google drive because of over 500MB size and supplied the address for downloading:  https://drive.google.com/file/d/1lCSJam-xlGZqkF9WZYNYaz6nodVxDI_g/view?usp=drive_link
+

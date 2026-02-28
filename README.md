@@ -4,6 +4,7 @@ Uploaded the trained machine learning model file (n2same_het_pretrained.pt) to G
 
 n2same_het_pretrained.pt was obtained by training on about 4000 original neutron images.
 
+Demo:
 Original neutron image vs denoised image: 
 
 <img width="1080" height="1018" alt="image" src="https://github.com/user-attachments/assets/2450ae9c-1fa5-4883-82ab-a5f32ab54bfd" />
@@ -15,7 +16,8 @@ Three screenshots of 3D reconstruction image:
 
 <img width="3837" height="2159" alt="Screenshot from 2026-02-21 10-53-53" src="https://github.com/user-attachments/assets/2e6f450c-10d4-4739-95e7-09c3ea61f4aa" />
 
-
+I attached the Google Drive link to the 3D reconstruction image because the file is larger than 6 GB and You can view it by using MRIcroGL software.
+https://drive.google.com/file/d/1t2MKjkNX9x-voLAUG-bPYK-rlfdjA8n5/view?usp=drive_link
 
 202511:
 

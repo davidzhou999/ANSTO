@@ -16,7 +16,7 @@ Three screenshots of 3D reconstruction image:
 
 <img width="3837" height="2159" alt="Screenshot from 2026-02-21 10-53-53" src="https://github.com/user-attachments/assets/2e6f450c-10d4-4739-95e7-09c3ea61f4aa" />
 
-I attached the Google Drive link to the 3D reconstruction image because the file is larger than 6 GB and You can view it by using MRIcroGL software.
+I attached the Google Drive link to the 3D reconstruction image (dingo_den_T_ds2.nii.gz) because the file is larger than 6 GB and You can view it by using MRIcroGL software.
 https://drive.google.com/file/d/1t2MKjkNX9x-voLAUG-bPYK-rlfdjA8n5/view?usp=drive_link
 
 202511:

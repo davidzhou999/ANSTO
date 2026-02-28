@@ -1,16 +1,12 @@
 20260219 update:
 
-uploaded trained mechine learning model file (n2same_het_pretrained.pt) to google drive because of over 500MB size and supplied the address for downloading:  https://drive.google.com/file/d/1lCSJam-xlGZqkF9WZYNYaz6nodVxDI_g/view?usp=drive_link
+Uploaded the trained machine learning model file (n2same_het_pretrained.pt) to Google Drive because it is over 500MB in size, and provided the download link:  https://drive.google.com/file/d/1lCSJam-xlGZqkF9WZYNYaz6nodVxDI_g/view?usp=drive_link
 
+n2same_het_pretrained.pt was obtained by training on about 4000 original neutron images.
 
-Original neutron image and ex-denoised image: 
+Original neutron image vs denoised image: 
 
 <img width="1080" height="1018" alt="image" src="https://github.com/user-attachments/assets/2450ae9c-1fa5-4883-82ab-a5f32ab54bfd" />
-
-
-<img width="1084" height="1016" alt="image" src="https://github.com/user-attachments/assets/95514ab3-17d0-4b84-ac42-acd6cd79415b" />
-
-<img width="1014" height="946" alt="Screenshot from 2026-02-17 12-38-37" src="https://github.com/user-attachments/assets/86c01045-df7d-4162-bee7-e3c2fe1334fd" />
 
 Three screenshots of 3D reconstruction image:
 <img width="3833" height="2149" alt="Screenshot from 2026-02-19 15-57-06" src="https://github.com/user-attachments/assets/6c2b1802-b874-4a42-8c5a-a530730f63fe" />

@@ -5,6 +5,9 @@ uploaded trained mechine learning model file (n2same_het_pretrained.pt) to googl
 
 Original neutron image and ex-denoised image: 
 
+<img width="1080" height="1018" alt="image" src="https://github.com/user-attachments/assets/2450ae9c-1fa5-4883-82ab-a5f32ab54bfd" />
+
+
 <img width="1084" height="1016" alt="image" src="https://github.com/user-attachments/assets/95514ab3-17d0-4b84-ac42-acd6cd79415b" />
 
 <img width="1014" height="946" alt="Screenshot from 2026-02-17 12-38-37" src="https://github.com/user-attachments/assets/86c01045-df7d-4162-bee7-e3c2fe1334fd" />

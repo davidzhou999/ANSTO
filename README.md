@@ -1,3 +1,22 @@
+20260219 update:
+
+uploaded trained mechine learning model file (n2same_het_pretrained.pt) to google drive because of over 500MB size and supplied the address for downloading:  https://drive.google.com/file/d/1lCSJam-xlGZqkF9WZYNYaz6nodVxDI_g/view?usp=drive_link
+
+
+Original neutron image and ex-denoised image: 
+<img width="1014" height="946" alt="Screenshot from 2026-02-17 12-38-37" src="https://github.com/user-attachments/assets/86c01045-df7d-4162-bee7-e3c2fe1334fd" />
+
+Three screenshots of 3D reconstruction image:
+<img width="3833" height="2149" alt="Screenshot from 2026-02-19 15-57-06" src="https://github.com/user-attachments/assets/6c2b1802-b874-4a42-8c5a-a530730f63fe" />
+
+<img width="3835" height="2151" alt="Screenshot from 2026-02-20 16-27-24" src="https://github.com/user-attachments/assets/65886f2c-ba2d-46bb-9b7b-ee7d6fe2f989" />
+
+<img width="3837" height="2159" alt="Screenshot from 2026-02-21 10-53-53" src="https://github.com/user-attachments/assets/2e6f450c-10d4-4739-95e7-09c3ea61f4aa" />
+
+
+
+202511:
+
 From three of the most effective despeckle methods used in deep learning pipelines or image post-processing, the Outlier-Based Masking + Morphological Cleanup approach has been implemented compared in terms of removal power, preservation of structure, and suitability for speckle-like noise (e.g., bright/dark dots in microscopy or satellite imagery), which are better than Non-Local Means (Post-Inference Only), and “Remove Outliers” Filter (e.g. ImageJ / Fiji Inspired):
 
 python train_n2same_het_multi_progress_metrics_stable.py \
@@ -393,10 +412,4 @@ python recon_tomopy_astra_fbp_patched.py ^
 
   
 
-
-
-
-20260219 update
-
-uploaded trained mechine learning model file (n2same_het_pretrained.pt) to google drive because of over 500MB size and supplied the address for downloading:  https://drive.google.com/file/d/1lCSJam-xlGZqkF9WZYNYaz6nodVxDI_g/view?usp=drive_link
 

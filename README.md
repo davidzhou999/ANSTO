@@ -1,6 +1,8 @@
 20260219 update:
 
-Uploaded the trained machine learning model file (n2same_het_pretrained.pt) to Google Drive because it is over 500MB in size, and provided the download link:  https://drive.google.com/file/d/1lCSJam-xlGZqkF9WZYNYaz6nodVxDI_g/view?usp=drive_link
+1. We recommend using an Ubuntu Linux system to run the entire pipeline; otherwise, you may encounter various errors if you use a Windows system.
+
+2. We uploaded the trained machine learning model file (n2same_het_pretrained.pt) to Google Drive because it is over 500MB in size, and provided the download link:  https://drive.google.com/file/d/1lCSJam-xlGZqkF9WZYNYaz6nodVxDI_g/view?usp=drive_link
 
 n2same_het_pretrained.pt was obtained by training on about 4000 original neutron images.
 
@@ -16,8 +18,9 @@ Three screenshots of 3D reconstruction image:
 
 <img width="3837" height="2159" alt="Screenshot from 2026-02-21 10-53-53" src="https://github.com/user-attachments/assets/2e6f450c-10d4-4739-95e7-09c3ea61f4aa" />
 
-I attached the Google Drive link to the 3D reconstruction image (dingo_den_T_ds2.nii.gz) because the file is larger than 6 GB and You can view it by using MRIcroGL software.
+3. We attached the Google Drive link to the 3D reconstruction image (dingo_den_T_ds2.nii.gz) because the file is larger than 6 GB and You can view it by using MRIcroGL software.
 https://drive.google.com/file/d/1t2MKjkNX9x-voLAUG-bPYK-rlfdjA8n5/view?usp=drive_link
+
 
 202511:
 

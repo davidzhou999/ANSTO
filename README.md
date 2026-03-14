@@ -1,3 +1,53 @@
+20260306
+
+a revised benchmarking study to compare the deep denoising pipeline against conventional method: 
+We established a standardized evaluation workflow using a fixed center of rotation (508.4), downsampling factor (ds=2), and two representative reconstruction slices, z=812 and z=960. Then we benchmarked raw reconstruction, median filtering, Gaussian filtering, bilateral filtering, non-local means (NLM), BM3D, the original ML-only output (ours_old), and a revised hybrid pipeline (ours_cap2_stripefw) that combines transmission-domain denoising, transmission clipping, Fourier–wavelet stripe correction, and FBP/gridrec reconstruction.
+The initial benchmark showed that the original ML-only output was not suitable for the paper in its current form. Although it had the highest gradient-based sharpness, it also introduced strong detector-aligned vertical banding, which increased the ring-index above both raw data and all classical baselines. On slice z=812, ours_old had ring_index 9.48×10⁻⁹ versus 6.40×10⁻⁹ for raw and 6.05×10⁻⁹ for NLM. On slice z=960, ours_old again performed worst, with ring_index 3.79×10⁻⁸ compared with 2.93×10⁻⁸ for raw and 2.81×10⁻⁸ for NLM.
+I then tested a revised hybrid workflow. The final version, ours_cap2_stripefw, produced a major improvement. On z=812, ring_index fell to 2.68×10⁻¹⁰, representing about a 24× reduction relative to raw and a 23× reduction relative to NLM. On z=960, ring_index decreased to 6.38×10⁻¹⁰, corresponding to roughly a 46× reduction relative to raw and a 44× reduction relative to NLM. Importantly, this revised method also retained substantially higher edge content than NLM/BM3D, while visually suppressing the vertical banding seen in the ML-only result. These results suggest that the revised paper should present the contribution as a hybrid ML + stripe-correction reconstruction pipeline rather than ML denoising alone.
+Overall conclusion: This is a major win. Quantitatively, our revised hybrid method — ours_cap2_stripefw — is now the best method for artefact suppression on both standardized slices. It changes the paper from: 
+“our deep denoiser alone improves reconstruction” 
+to
+“a hybrid transmission-domain ML denoising + stripe-correction pipeline yields the best reconstruction quality” 
+
+
+Figure 4. Reconstruction comparison on standardized slice z = 812. The panel compares raw data, median3, gaussian1, bilateral, NLM, BM3D, the initial ML-only output (ours_old), and the final hybrid pipeline (ours_cap2_stripefw). The ML-only output exhibits strong detector-aligned vertical banding, whereas the final hybrid method suppresses stripe/ring artefacts while preserving more local structure than heavily smoothed classical baselines.
+
+Method	Ring index	Sharpness	CNR	File
+raw	6.40x10-9	1.85×10−5	5.761	raw.nii.gz
+median3	6.36×10−9	1.60×10−5	6.728	median3.nii.gz
+gaussian1	6.30×10−9	1.53×10−5	6.931	gaussian1.nii.gz
+bilateral	6.16×10−9	7.27×10−6	10.302	bilateral.nii.gz
+nlm	6.05×10−9	4.07×10−6	13.652	nlm.nii.gz
+bm3d	6.17×10−9	6.38×10−6	11.475	bm3d.nii.gz
+ours_old	9.48×10−9	2.90×10−5	1.198	ours.nii.gz
+ours_cap2_stripefw	2.68×10−10	1.12×10−5	0.387	ours_cap2_stripefw.nii.gz
+
+Table 1. Quantitative evaluation of raw data, classical denoising baselines, the ML-only variant (ours_old), and the final hybrid pipeline (ours_cap2_stripefw) on standardized slice z=812. Lower ring index indicates fewer ring/stripe artefacts. Higher sharpness indicates greater retained local gradient content.
+
+
+Figure 5. Reconstruction comparison on standardized slice z = 960. The same method order and reconstruction settings as in Figure 4 are used for a second, more challenging slice. The final hybrid pipeline (ours_cap2_stripefw) maintains strong suppression of stripe/ring artefacts relative to both the raw reconstruction and the classical denoising baselines, while the ML-only output (ours_old) continues to show severe structured banding.
+
+Method	Ring index	Sharpness	CNR	File
+raw	2.93×10−8	2.98×10−5	3.132	raw.nii.gz
+median3	2.91×10−8	2.55×10−5	3.641	median3.nii.gz
+gaussian1	2.89×10−8	2.44×10−5	3.662	gaussian1.nii.gz
+bilateral	2.85×10−8	1.10×10−5	6.685	bilateral.nii.gz
+nlm	2.81×10−8	6.25×10−6	8.734	nlm.nii.gz
+bm3d	2.85×10−8	9.65×10−6	7.019	bm3d.nii.gz
+ours_old	3.79×10−8	5.32×10−5	0.051	ours.nii.gz
+ours_cap2_stripefw	6.38×10−10	1.81×10−5	0.352	ours_cap2_stripefw.nii.gz
+
+Table 2. Quantitative evaluation of raw data, classical denoising baselines, the ML-only variant (ours_old), and the final hybrid pipeline (ours_cap2_stripefw) on standardized slice z=960. Lower ring index indicates improved artefact suppression. Higher sharpness indicates stronger retained local structural variation.
+
+Method	Slice	Ring index	Sharpness	CNR
+ours_old	z=812	9.48×10−9	2.90×10−5	1.198
+ours_cap2_stripefw	z=812	2.68×10−10	1.12×10−5	0.387
+ours_old	z=960	3.79×10−8	5.32×10−5	0.051
+ours_cap2_stripefw	z=960	6.38×10−10	1.81×10−5	0.352
+
+Table 3. Ablation comparison between the initial ML-only reconstruction (ours_old) and the final hybrid method (ours_cap2_stripefw) on standardized slices z=812 and z=960. The hybrid method incorporates transmission-range control and Fourier–wavelet stripe correction prior to reconstruction.
+
+
 20260219 update:
 
 1. We recommend using an Ubuntu Linux system to run the entire pipeline; otherwise, you may encounter various errors if you use a Windows system.

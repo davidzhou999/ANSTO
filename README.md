@@ -9,7 +9,7 @@ Overall conclusion: This is a major win. Quantitatively, our revised hybrid meth
 to
 “a hybrid transmission-domain ML denoising + stripe-correction pipeline yields the best reconstruction quality” 
 
-
+![输入图Figure 4. Reconstruction comparison on standardized slice z = 812. The panel compares raw data, median3, gaussian1, bilateral, NLM, BM3D, the initial ML-only output (ours_old), and the final hybrid pipeline (ours_cap2_stripefw). The ML-only output exhibits strong detector-aligned vertical banding, whereas the final hybrid method suppresses stripe/ring artefacts while preserving more local structure than heavily smoothed classical baselines.片说明](/imgs/2026-03-14/Sc6wbufsMuURKscO.jpeg)
 Figure 4. Reconstruction comparison on standardized slice z = 812. The panel compares raw data, median3, gaussian1, bilateral, NLM, BM3D, the initial ML-only output (ours_old), and the final hybrid pipeline (ours_cap2_stripefw). The ML-only output exhibits strong detector-aligned vertical banding, whereas the final hybrid method suppresses stripe/ring artefacts while preserving more local structure than heavily smoothed classical baselines.
 
 Method	Ring index	Sharpness	CNR	File
@@ -24,7 +24,7 @@ ours_cap2_stripefw	2.68×10−10	1.12×10−5	0.387	ours_cap2_stripefw.nii.gz
 
 Table 1. Quantitative evaluation of raw data, classical denoising baselines, the ML-only variant (ours_old), and the final hybrid pipeline (ours_cap2_stripefw) on standardized slice z=812. Lower ring index indicates fewer ring/stripe artefacts. Higher sharpness indicates greater retained local gradient content.
 
-
+Figure 5. Reconstruction comparison on standardized slice z = 960. The same method order and reconstruction settings as in Figure 4 are used for a second, more challenging slice. The final hybrid pipeline (ours_cap2_stripefw) maintains strong suppression of stripe/ring artefacts relative to both the raw reconstruction and the classical denoising baselines, while the ML-only output (ours_old) continues to show severe structured banding.![输入图片说明](/imgs/2026-03-14/QwXwAVIuQdx9ksk6.jpeg)
 Figure 5. Reconstruction comparison on standardized slice z = 960. The same method order and reconstruction settings as in Figure 4 are used for a second, more challenging slice. The final hybrid pipeline (ours_cap2_stripefw) maintains strong suppression of stripe/ring artefacts relative to both the raw reconstruction and the classical denoising baselines, while the ML-only output (ours_old) continues to show severe structured banding.
 
 Method	Ring index	Sharpness	CNR	File
